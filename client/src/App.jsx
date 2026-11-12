@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 
 import './App.css'
+import API from './api'
 
 import DashboardLayout from './components/DashboardLayout'
 import ProjectDetails from './components/ProjectDetails'
@@ -66,7 +67,7 @@ function App() {
       const endpoint = isLogin ? 'login' : 'register'
 
       const response = await fetch(
-        `http://localhost:5000/api/auth/${endpoint}`,
+        `${API}/auth/${endpoint}`,
         {
           method: 'POST',
           headers: {

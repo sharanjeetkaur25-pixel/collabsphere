@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { Link, useOutletContext } from 'react-router-dom'
 import '../../App.css'
-
-const API = 'http://localhost:5000/api'
+import API from '../../api'
 
 function MyProjects() {
   const {

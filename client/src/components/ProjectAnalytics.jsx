@@ -1,4 +1,4 @@
-
+import API from '../api'
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -16,7 +16,7 @@ function ProjectAnalytics({ projectId }) {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          `http://localhost:5000/api/projects/${projectId}/analytics`,
+          `${API}/projects/${projectId}/analytics`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

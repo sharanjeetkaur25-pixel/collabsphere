@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-
-const API = 'http://localhost:5000/api'
+import API from '../api'
 
 function PublicProject() {
   const { token } = useParams()

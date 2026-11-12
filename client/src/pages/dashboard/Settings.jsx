@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
+import API from '../../api'
 
 function Settings() {
   const { user } = useOutletContext()
@@ -30,7 +31,7 @@ function Settings() {
 
     try {
       const response = await fetch(
-        'http://localhost:5000/api/auth/profile',
+          `${API}/auth/profile`,
         {
           method: 'PUT',
           headers: {
@@ -75,7 +76,7 @@ function Settings() {
 
     try {
       const response = await fetch(
-        'http://localhost:5000/api/auth/change-password',
+          `${API}/auth/change-password`,
         {
           method: 'PUT',
           headers: {

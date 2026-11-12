@@ -17,8 +17,9 @@ const router = express.Router({ mergeParams: true });
 
 const currentFile = fileURLToPath(import.meta.url);
 const currentDirectory = path.dirname(currentFile);
-const uploadDirectory = path.resolve(currentDirectory, "../uploads");
-
+const uploadDirectory =
+  process.env.UPLOAD_DIR || path.resolve(currentDirectory, "../uploads");
+  
 fs.mkdirSync(uploadDirectory, { recursive: true });
 
 const allowedExtensions = new Set([

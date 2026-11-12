@@ -7,8 +7,7 @@ import ProjectFiles from './ProjectFiles'
 import ProjectNotes from './ProjectNotes'
 import ProjectAIStudio from './ProjectAIStudio'
 import './OpenProject.css'
-
-const API = 'http://localhost:5000/api'
+import API from '../api'
 
 const CODE_EXTENSIONS = [
   '.js', '.jsx', '.ts', '.tsx', '.py', '.java', '.json', '.css', '.html',

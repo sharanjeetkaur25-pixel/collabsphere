@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import '../App.css'
-
-const API = 'http://localhost:5000/api'
+import API from '../api'
 
 function DashboardLayout({ onLogout }) {
   const [user, setUser] = useState(null)
